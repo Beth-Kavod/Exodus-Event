@@ -15,8 +15,10 @@ import {
   DropdownItem
 } from 'reactstrap'
 import { useUser } from '@auth0/nextjs-auth0/client'
-import Logo from '@/public/Logo'
+import Logo from '@/public/SolarLogo.png'
 import CustomUserContext from './GlobalUserContext'; 
+
+import Image from 'next/image'
 
 import styles from './NavBar.module.css'
 
@@ -75,7 +77,13 @@ const NavBar = () => {
     <div className={styles.nav_container} data-testid="navbar" >
       <Navbar className={styles.navbar}  expand="md">
         <a href="/">
-          <Logo scale="75" />
+          {/* <Logo scale="75" /> */}
+          <Image 
+            src={Logo}
+            alt="Logo"
+            width={100}
+            height={100}
+          />
         </a>
         <Container>
           <NavbarToggler onClick={toggle} data-testid="navbar-toggle"  /> 

@@ -40,8 +40,8 @@ export default function VolunteerSignUp() {
       </Hero>
       <div className={styles.mainDiv}>
         <h4>
-          If you're interested in volunteering for one of our cultural celebrations
-          please contact us using the form below:
+          If you're interested in volunteering for one of our 
+          festivals please contact us using the form below:
         </h4>
         <br  id="volunteer" />
         <VolunteerForm params={{ formData, setFormData, requestMethod }} />

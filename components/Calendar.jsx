@@ -45,7 +45,6 @@ export default function Calendar() {
 			// Sort pastEvents by end time in descending order
 						console.log(pastEvents)
 			pastEvents.sort((a, b) => new Date(b.start) - new Date(a.start));
-			console.log(pastEvents)
 			if (pastEvents.length > 0) {
 				const closestEventBeforeNow = pastEvents[0];
 				findData(closestEventBeforeNow.start);
@@ -53,7 +52,7 @@ export default function Calendar() {
 				calendarApi.gotoDate(closestEventBeforeNow.start);
 				// console.log(closestEventBeforeNow.end);
 			} else {
-				alert(`No events listed before: ${selectedDate.toLocaleDateString()}`)
+				alert(`No events starting before: ${selectedDate.toLocaleDateString()}`)
 			}
 		}
 	}	
@@ -66,7 +65,6 @@ export default function Calendar() {
 			const calendarApi = calendarRef.current.getApi();
 			const futureEvents = events.filter(event => new Date(event.start) > new Date(selectedDate));
 			// Sort futureEvents by end time in descending order
-			console.log(futureEvents)
 			futureEvents.sort((a, b) => new Date(a.start) - new Date(b.start));
 			console.log(futureEvents)
 			if (futureEvents.length > 0) {
@@ -75,7 +73,7 @@ export default function Calendar() {
 				setSelectedDate(new Date(closestEventAfterNow.start));
 				calendarApi.gotoDate(closestEventAfterNow.start);
 			} else {
-				alert(`No events listed after: ${selectedDate.toLocaleDateString()}`)
+				alert(`No events starting after: ${selectedDate.toLocaleDateString()}`)
 			}
 		}
 	}
