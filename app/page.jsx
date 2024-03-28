@@ -4,9 +4,12 @@ import Calendar from '@/components/Calendar'
 import Loading from '@/components/overlays/Loading'
 import styles from './page.module.css'
 import Image from "next/image";
-import heroImage from "@/public/Images/BackgroundImg.jpg";
+import heroImage from "@/public/Images/theExodus.png";
 import Logo from '@/public/Logo';
 import Hero from '@/components/Hero'
+
+
+// import { hash } from '@/utils/routeMethods'
 
 import localFont from 'next/font/local'
 const artesaniaFont = localFont({
@@ -15,62 +18,22 @@ const artesaniaFont = localFont({
 })
 
 export default function Index() {
-  // We no longer need this as we have moved the whole calendar to the front page
-  /* const [nextEvent, setNextEvent] = useState(null)
-
-  useEffect(() => {
-    const controller = new AbortController()
-    const signal = controller.signal
-
-    async function fetchData() {
-      try {
-        const eventCall = await fetch('./api/events/festivals?nextEvent=true', { signal, method: "GET" })
-        const fetchedData = await eventCall.json()
-
-        const startDate = new Date(fetchedData.data.start)
-        const endDate = new Date(fetchedData.data.end)
-
-        const returnedEvent = {
-          ...fetchedData.data,
-          // You can change these Date methods to whatever format you want
-          start: startDate.toLocaleDateString(),
-          end: endDate.toLocaleDateString()
-        }
-
-        setNextEvent(returnedEvent)
-      } catch (error) {
-        if (error.name === 'AbortError') {
-          console.log('Fetch aborted')
-        } else {
-          console.error('Error fetching data:', error)
-        }
-      }
-    }
-
-    fetchData()
-
-    return () => controller.abort()
-  }, []) */
-
   return (
     <>
-      <Hero params={{ heroImage }} />
-      <div className={`${styles.headText} ${artesaniaFont.className}`}>
-        <div>
-          <h1>Cultural</h1>
-          <h1>Arts</h1>
-          <h1>Committee of</h1>
-          <h1>Nogales</h1>
-          <h1>Arizona</h1>
+      <Hero params={{ heroImage }}> 
+        <div className={`${styles.headText} ${artesaniaFont.className}`}>
+          <div>
+            <h1>Xodus</h1>
+          </div>
+          <br />
+          <br />
+          <div className={styles.buttonContainer}>
+            <a className={styles.callToAction} href="#events">View Events</a>
+          </div>
         </div>
-        <br />
-        <br />
-        <div className={styles.buttonContainer}>
-          <a className={styles.callToAction} href="#events">View Events</a>
-        </div>
-      </div>
+      </Hero>
 
-      <div className={styles.headmsg}>
+      {/* <div className={styles.headmsg}>
         <h1>Cultural Arts Comittee of Nogales Arizona</h1>
       </div>
 
@@ -104,7 +67,7 @@ export default function Index() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className={styles.eventsDiv}>
         <div className={styles.calender} id="events">

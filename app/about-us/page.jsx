@@ -6,15 +6,15 @@ import Highlight from "@/components/Highlight";
 // Images
 import Image from "next/image";
 import heroImage from "@/public/Images/aboutUs.jpg";
-import ImportDirectorInformation from "@utils/ImportDirectorInformation";
+// import ImportDirectorInformation from "@utils/ImportDirectorInformation";
 
 import Hero from '@/components/Hero'
 import DirectorImage from '@/components/gallery/DirectorImage'
 
 // import Donate from '@/components/buttons/Donate'
 
-import ChristmasImg from '@/public/Images/Christmas.jpg'
-import DiaDel from '@/public/Images/Dia_Del_Amor.JPG'
+import ChristmasImg from '@/public/Images/theExodus.png'
+import DiaDel from '@/public/Images/theExodus.png'
 
 import localFont from 'next/font/local'
 const artesaniaFont = localFont({
@@ -28,26 +28,27 @@ export default function aboutUs() {
       <Hero 
         params={{ heroImage }} 
         className={styles.heroImage}
-      />
-      <div className={`${styles.headText} ${artesaniaFont.className}`}>
-        <div>
-          <h1>About Us</h1>
+      >
+        <div className={`${styles.headText} ${artesaniaFont.className}`}>
+          <div>
+            <h1>About Us</h1>
+          </div>
+          <br />
+          <br />
+          <div className={styles.buttonContainer}>
+            <a className={styles.callToAction} href="#readMore">Read more</a>
+          </div>
         </div>
-        <br />
-        <br />
-        <div className={styles.buttonContainer}>
-          <a className={styles.callToAction} href="#readMore">Read more</a>
-        </div>
-      </div>
+      </Hero>
 
-      <div className={styles.boardOfDirectors}>
+      {/* <div className={styles.boardOfDirectors}>
         <h1>Board Of Directors</h1>
         <div className={styles.directorContainer}>
           {ImportDirectorInformation && ImportDirectorInformation.map(director => {
             return <DirectorImage key={director.name} params={{ profileImage: director.image.src, name: director.name, position: director.position }} />
           })}
         </div>
-      </div>
+      </div> */}
 
       <div className={styles.godfather}>
         <div className={styles.container1}>

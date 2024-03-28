@@ -7,7 +7,7 @@ import Cookies from 'js-cookie'
 
 const ProtectedRoute = ({ children }) => {
   const router = useRouter();
-  const {user, isLoading} = useUser();
+  const { user, isLoading } = useUser();
 
   useEffect(() => {
     if (!isLoading && !user) {

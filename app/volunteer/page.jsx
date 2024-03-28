@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import VolunteerForm from '@/components/forms/VolunteerForm';
 import styles from './page.module.css'
 
-import heroImage from '@/public/Images/volunteerHero.JPG'
+import heroImage from '@/public/Images/theExodus.png'
 import Hero from '@/components/Hero'
 
 // Overlays
@@ -28,15 +28,16 @@ export default function VolunteerSignUp() {
 
   return (
     <>
-      <Hero params={{ heroImage }} />
-      <div className={`${styles.headText} ${artesaniaFont.className}`}>
-        <div>
-          <h1>Volunteer</h1>
+      <Hero params={{ heroImage }}>
+        <div className={`${styles.headText} ${artesaniaFont.className}`}>
+          <div>
+            <h1>Volunteer</h1>
+          </div>
+          <div className={styles.buttonContainer}>
+            <a className={styles.callToAction} href="#volunteer">Sign up</a>
+          </div>
         </div>
-        <div className={styles.buttonContainer}>
-          <a className={styles.callToAction} href="#volunteer">Sign up</a>
-        </div>
-      </div>
+      </Hero>
       <div className={styles.mainDiv}>
         <h4>
           If you're interested in volunteering for one of our cultural celebrations
