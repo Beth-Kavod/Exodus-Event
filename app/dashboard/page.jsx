@@ -117,7 +117,7 @@ function Profile() {
               <h3>Support Resources</h3>
               <p>
                 
-                <a target="_blank" href={'https://github.com/Cultural-Art-Committee-Nogales-Arizona/WLBA-Project/blob/main/api-documentation.md'}>API Docs</a>
+                <a target="_blank" href={'https://github.com/Beth-Kavod/Exodus-Event/blob/main/api-documentation.md'}>API Docs</a>
               </p>
             </>
             : 

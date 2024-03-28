@@ -1,5 +1,5 @@
 v1.2
-# CACNA API Documentation
+# Xodus API Documentation
 
 ### Changelog
 ```
