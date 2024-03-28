@@ -5,7 +5,6 @@ import Loading from '@/components/overlays/Loading'
 import styles from './page.module.css'
 import Image from "next/image";
 import heroImage from "@/public/Images/theExodus.png";
-import Logo from '@/public/Logo';
 import Hero from '@/components/Hero'
 
 
