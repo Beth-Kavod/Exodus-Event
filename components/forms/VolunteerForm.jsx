@@ -109,7 +109,7 @@ export default function VolunteerForm({ params }) {
       if (responseData.success) {
         setFormData({})
         // I want to make a success component, alert freezes the window 
-        setSuccess(`Successfully make volunteer Named: ${responseData.data.name}`)
+        setSuccess(`created volunteer Named: ${responseData.data.name}`)
       } else { 
         setError(`Failed to submit the form ${responseData.errorMessage}`)
         throw new Error(`Event API failed to parse request. Status code: ${response.status}`)
